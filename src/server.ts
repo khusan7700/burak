@@ -7,6 +7,7 @@
 
 // const person: string = "Usman";
 // const count: number = 100;
+
 //---------------------------------------
 
 // Architectural pattern: MVC, Dependency Injection, MVP
@@ -26,3 +27,13 @@ sifatida emas balki malum bir bolaklarini strukturasini
  yechada hizmat ko'rsatadigon petternlar hisoblanadi. 
  malum bir vazifani bajaradigon qism
  --qol suyagi--*/
+//---------------------------36 dars--------------------------------------
+
+// import moment from 'moment'; // commonjs da yozilishiconst moment = require ('moment);
+
+import dotenv from "dotenv";
+dotenv.config();
+
+// console.log("PORT:", process.env.PORT);
+
+// console.log("MONGO_URL:", process.env.MONGO_URL);
