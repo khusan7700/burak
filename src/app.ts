@@ -1,5 +1,7 @@
 import express from "express";
 import path from "path";
+import router from "./router";
+import routerAdmin from "./routerAdmin";
 
 /** 1-ENTRANCE**/
 const app = express();
@@ -15,5 +17,7 @@ app.set("view", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 /** 4-ROUTERS**/
+app.use("/admin", routerAdmin); //BSSR: EJS
+app.use("/", router); //SPA: React server uchun.
 
 export default app; // module.exports (bilan bir-xil)
