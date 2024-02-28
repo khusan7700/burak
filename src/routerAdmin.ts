@@ -4,7 +4,7 @@ import restaurantController from "./controllers/restaurant.controller";
 
 routerAdmin.get("/", restaurantController.goHome);
 
-routerAdmin.get("/login", restaurantController.goHome);
+routerAdmin.get("/login", restaurantController.gologin);
 
 routerAdmin.get("/signup", restaurantController.getSignup);
 

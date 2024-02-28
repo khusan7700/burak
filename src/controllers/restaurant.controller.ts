@@ -11,7 +11,7 @@ restaurantController.goHome = (req: Request, res: Response) => {
   }
 };
 
-restaurantController.goHome = (req: Request, res: Response) => {
+restaurantController.gologin = (req: Request, res: Response) => {
   try {
     res.send("Login Page");
   } catch (err) {
