@@ -1,5 +1,5 @@
 console.log("Train.ts ishga tushdi!");
-//---------------------------------------------------------------
+//-------------------------H--------------------------------------
 
 /* 
 shunday function tuzing, u integerlardan iborat arrayni argument
