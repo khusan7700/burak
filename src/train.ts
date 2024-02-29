@@ -30,6 +30,8 @@ MASALAN: gerReverse("hello") return qiladi "olleh"
 
 // console.log(gerReverse("hello"));
 
+//-----------------------------------------------------------
+
 /** 
  Project Standards:
   - Loggin standards
@@ -42,3 +44,5 @@ MASALAN: gerReverse("hello") return qiladi "olleh"
 
   
  */
+
+//-----------------------------------------------------------
