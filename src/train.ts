@@ -29,3 +29,16 @@ MASALAN: gerReverse("hello") return qiladi "olleh"
 // }
 
 // console.log(gerReverse("hello"));
+
+/** 
+ Project Standards:
+  - Loggin standards
+  - Naming standards
+      function, method, variable => CAMLE   goHome
+      class => PASCAL                       MemberServise
+      folder => KEBAB
+      css => SNAKE                          button_style
+  - Error handling
+
+  
+ */
