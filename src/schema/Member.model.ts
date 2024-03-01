@@ -12,7 +12,7 @@ const memberSchema = new Schema(
     memberStatus: {
       type: String,
       enum: MemberStatus,
-      default: MemberStatus,
+      default: MemberStatus.ACTIVE,
     },
 
     memberNick: {
