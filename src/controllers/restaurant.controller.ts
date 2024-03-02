@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
 import MemberService from "../models/member.service";
-import { MemberInput } from "../libs/types/member";
+import { LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
 
 const restaurantController: T = {};
@@ -17,8 +17,9 @@ restaurantController.goHome = (req: Request, res: Response) => {
     console.log("Error, goHome:", err);
   }
 };
+//-------------------------------GET.LOGIN--------------------------------------------
 
-restaurantController.gologin = (req: Request, res: Response) => {
+restaurantController.getLogin = (req: Request, res: Response) => {
   try {
     console.log("gologin");
 
@@ -27,26 +28,34 @@ restaurantController.gologin = (req: Request, res: Response) => {
     console.log("Error, GetLogin:", err);
   }
 };
+//-------------------------------GET.SIGNUP--------------------------------------------
 
 restaurantController.getSignup = (req: Request, res: Response) => {
   try {
     console.log("getSignup");
-
     res.send("Signup Page");
   } catch (err) {
     console.log("Error, getSignup:", err);
   }
 };
+//-------------------------------POST.LOGIN--------------------------------------------
 
-restaurantController.processlogin = (req: Request, res: Response) => {
+restaurantController.processLogin = async (req: Request, res: Response) => {
   try {
-    console.log("processlogin");
-    res.send("DONE");
+    console.log("processLogin");
+    console.log("body:", req.body);
+    const input: LoginInput = req.body;
+
+    const memberService = new MemberService();
+    const result = await memberService.processLogin(input);
+
+    res.send(result);
   } catch (err) {
     console.log("Error, processlogin:", err);
+    res.send(err);
   }
 };
-
+//-------------------------------POST.SIGNUP--------------------------------------------
 restaurantController.processSignup = async (req: Request, res: Response) => {
   try {
     console.log("processSignup");
