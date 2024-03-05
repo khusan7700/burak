@@ -1,29 +1,68 @@
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
+import MemberService from "../models/Member.service";
+import { LoginInput, Member, MemberInput } from "../libs/types/member";
+import Errors from "../libs/Errors";
+
+const memberService = new MemberService();
 
 const memberController: T = {};
-memberController.goHome = (req: Request, res: Response) => {
+
+//-------------------------------POST.SIGNUP--------------------------------------------
+memberController.signup = async (req: Request, res: Response) => {
   try {
-    res.send("Home Page");
+    console.log("signup");
+    const input: MemberInput = req.body,
+      result: Member = await memberService.signup(input);
+    //TODO TOKENS SESSIONS
+
+    res.json({ member: result });
   } catch (err) {
-    console.log("Error, goHome:", err);
+    console.log("Error, signup:", err);
+    if (err instanceof Errors) res.status(err.code).json(err);
+    else res.status(Errors.standard.code).json(Errors.standard);
   }
 };
 
-memberController.gologin = (req: Request, res: Response) => {
+//-------------------------------POST.LOGIN--------------------------------------------
+
+memberController.login = async (req: Request, res: Response) => {
   try {
-    res.send("Login Page");
+    console.log("login");
+    const input: LoginInput = req.body,
+      result = await memberService.login(input);
+    //TODO TOKENS SESSIONS
+
+    res.json({ member: result });
   } catch (err) {
-    console.log("Error, GetLogin:", err);
+    console.log("Error, signup:", err);
+    if (err instanceof Errors) res.status(err.code).json(err);
+    else res.status(Errors.standard.code).json(Errors.standard);
   }
 };
 
-memberController.getSignup = (req: Request, res: Response) => {
-  try {
-    res.send("Signup Page");
-  } catch (err) {
-    console.log("Error, getSignup:", err);
-  }
-};
+// memberController.goHome = (req: Request, res: Response) => {
+//   try {
+//     res.send("Home Page");
+//   } catch (err) {
+//     console.log("Error, goHome:", err);
+//   }
+// };
+
+// memberController.gologin = (req: Request, res: Response) => {
+//   try {
+//     res.send("Login Page");
+//   } catch (err) {
+//     console.log("Error, GetLogin:", err);
+//   }
+// };
+
+// memberController.getSignup = (req: Request, res: Response) => {
+//   try {
+//     res.send("Signup Page");
+//   } catch (err) {
+//     console.log("Error, getSignup:", err);
+//   }
+// };
 
 export default memberController;
