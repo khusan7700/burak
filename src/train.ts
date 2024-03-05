@@ -1,5 +1,5 @@
 console.log("Train.ts ishga tushdi!");
-//-------------------------H--------------------------------------
+//-------------------------I--------------------------------------
 
 /* I-TASK: 
 
@@ -8,14 +8,18 @@ Shunday function tuzing, unga string argument pass bolsin.
 MASALAN: getDigits("m14i1t") return qiladi "141"
  */
 
-function abs(digitlar: string): () => string {
-  return function (): string {
-    return digitlar;
-  };
+function getDigits(str: string): string {
+  let result: string = "";
+  for (let char of str) {
+    if (!isNaN(parseInt(char))) {
+      //isNaN not a number
+      result += char;
+    }
+  }
+  return result;
 }
-const getDigitlar = abs("141");
-const returnWord = getDigitlar();
-console.log(returnWord);
+
+console.log(getDigits("m14i1t"));
 
 //-------------------------H--------------------------------------
 
