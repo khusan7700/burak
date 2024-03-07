@@ -15,8 +15,7 @@ sifatida emas balki malum bir bolaklarini strukturasini
  yechada hizmat ko'rsatadigon petternlar hisoblanadi. 
  malum bir vazifani bajaradigon qism
  --qol suyagi--*/
-
-// import moment from 'moment'; // commonjs da yozilishiconst moment = require ('moment);
+//---------------------------36 dars--------------------------------------
 
 import dotenv from "dotenv";
 dotenv.config();
@@ -29,7 +28,7 @@ mongoose
     console.log("mongoDB connection secceed");
     const PORT = process.env.PORT ?? 3003;
     app.listen(PORT, function () {
-      console.info(` The server is running successfully on pory: ${PORT}`);
+      console.log(` The server is running successfully on pory: ${PORT}`);
       console.info(`Admin project on http://localhost:${PORT}/admin \n`);
     });
   })

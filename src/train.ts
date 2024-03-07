@@ -70,11 +70,6 @@ Rest Api
 GraphQl Api
 
 
-
-
-Traditional FD          => BSSR   => EJS
-Modern FD               => SPA    => REACT
-
   
  */
 
