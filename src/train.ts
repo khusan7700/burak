@@ -30,7 +30,6 @@ function getDigits(str: string): string {
   let result: string = "";
   for (let char of str) {
     if (!isNaN(parseInt(char))) {
-      //isNaN not a number
       result += char;
     }
   }
