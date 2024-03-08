@@ -1,4 +1,22 @@
 console.log("Train.ts ishga tushdi!");
+//---------------------------------------------------------------
+// H task
+function findLongestWord(inputString: string) {
+  const words: string[] = inputString.split(" ");
+
+  let longestWord: string = "";
+  for (const word of words) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
+const exampleString: string = "come from Uzbekiston";
+
+const result: string = findLongestWord(exampleString);
+console.log(result);
+
 //-------------------------I--------------------------------------
 
 /* I-TASK: 
