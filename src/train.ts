@@ -1,21 +1,40 @@
 console.log("Train.ts ishga tushdi!");
-//---------------------------------------------------------------
-// H task
-function findLongestWord(inputString: string) {
-  const words: string[] = inputString.split(" ");
+//-------------------------K--------------------------------------
 
-  let longestWord: string = "";
-  for (const word of words) {
-    if (word.length > longestWord.length) {
-      longestWord = word;
+/*Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
+MASALAN: countVowels("string") return 1; */
+
+function getVolwels(str: string): number {
+  const volwels: string[] = ["a", "e", "u", "i", "o", "A", "E", "U", "I", "O"];
+
+  let volwel: number = 0; // bu yerda count versa pastda ++ amali ishlame qoladi shuning uchun let ishlatish shart.
+
+  for (let char of str) {
+    if (volwels.includes(char)) {
+      volwel++;
     }
   }
-  return longestWord;
+  return volwel;
 }
-const exampleString: string = "come from Uzbekiston";
 
-const result: string = findLongestWord(exampleString);
-console.log(result);
+console.log(getVolwels("salom")); // stringni ichida nechta unli harif bolsa shuni nomerlab terminalga chiqarib beradi.
+//-------------------------J--------------------------------------
+
+// function findLongestWord(inputString: string) {
+//   const words: string[] = inputString.split(" ");
+
+//   let longestWord: string = "";
+//   for (const word of words) {
+//     if (word.length > longestWord.length) {
+//       longestWord = word;
+//     }
+//   }
+//   return longestWord;
+// }
+// const exampleString: string = "come from Uzbekiston";
+
+// const result: string = findLongestWord(exampleString);
+// console.log(result);
 
 //-------------------------I--------------------------------------
 
@@ -26,17 +45,17 @@ Shunday function tuzing, unga string argument pass bolsin.
 MASALAN: getDigits("m14i1t") return qiladi "141"
  */
 
-function getDigits(str: string): string {
-  let result: string = "";
-  for (let char of str) {
-    if (!isNaN(parseInt(char))) {
-      result += char;
-    }
-  }
-  return result;
-}
+// function getDigits(str: string): string {
+//   let result: string = "";
+//   for (let char of str) {
+//     if (!isNaN(parseInt(char))) {
+//       result += char;
+//     }
+//   }
+//   return result;
+// }
 
-console.log(getDigits("m14i1t"));
+// console.log(getDigits("m14i1t"));
 
 //-------------------------H--------------------------------------
 
@@ -51,7 +70,7 @@ MASALAN: getPositive([1, -4, 2]) return qiladi "12"
 //   return arr.filter((x) => x > 0).join("");
 // }
 
-// // Test
+// Test
 // console.log(getPositive([1, -4, 2]));
 
 //---------------------------------------------------------------
