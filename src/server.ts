@@ -22,6 +22,8 @@ dotenv.config();
 import mongoose from "mongoose";
 import app from "./app";
 
+console.log("SERVER ISHGA TUSHDI.");
+
 mongoose
   .connect(process.env.MONGO_URL as string, {})
   .then((data) => {

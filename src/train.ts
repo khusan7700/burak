@@ -94,7 +94,7 @@ MASALAN: gerReverse("hello") return qiladi "olleh"
  Project Standards:
   - Loggin standards
   - Naming standards
-      function, method, variable => CAMLE   goHome
+      function, method, variable, object => CAMLE   goHome
       class => PASCAL                       MemberServise
       folder => KEBAB
       css => SNAKE                          button_style
