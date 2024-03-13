@@ -1,23 +1,66 @@
 console.log("Train.ts ishga tushdi!");
+
+//-------------------------L--------------------------------------
+
+/* Shunday function yozing, u string qabul qilsin va string ichidagi
+ hamma sozlarni chappasiga yozib va sozlar ketma-ketligini buzmasdan stringni qaytarsin.
+ MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
+*/
+
+function reverseSentence(str: string): string {
+  str = str.trim();
+
+  let words: string[] = [];
+  let currentWord: string = "";
+
+  for (let i: number = 0; i < str.length; i++) {
+    if (str[i] !== " ") {
+      currentWord += str[i];
+    } else {
+      words.push(currentWord);
+      currentWord = "";
+    }
+  }
+
+  if (currentWord !== "") {
+    words.push(currentWord);
+  }
+
+  let reversed: string = "";
+
+  for (let i: number = words.length - 1; i >= 0; i--) {
+    reversed += words[i];
+
+    if (i !== 0) {
+      reversed += " ";
+    }
+  }
+
+  return reversed;
+}
+
+// Test qilish
+console.log(reverseSentence(" coding! like we"));
+
 //-------------------------K--------------------------------------
 
 /*Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
 MASALAN: countVowels("string") return 1; */
 
-function getVolwels(str: string): number {
-  const volwels: string[] = ["a", "e", "u", "i", "o", "A", "E", "U", "I", "O"];
+// function getVolwels(str: string): number {
+//   const volwels: string[] = ["a", "e", "u", "i", "o", "A", "E", "U", "I", "O"];
 
-  let volwel: number = 0; // bu yerda count versa pastda ++ amali ishlame qoladi shuning uchun let ishlatish shart.
+//   let volwel: number = 0; // bu yerda count versa pastda ++ amali ishlame qoladi shuning uchun let ishlatish shart.
 
-  for (let char of str) {
-    if (volwels.includes(char)) {
-      volwel++;
-    }
-  }
-  return volwel;
-}
+//   for (let char of str) {
+//     if (volwels.includes(char)) {
+//       volwel++;
+//     }
+//   }
+//   return volwel;
+// }
 
-console.log(getVolwels("salom")); // stringni ichida nechta unli harif bolsa shuni nomerlab terminalga chiqarib beradi.
+// console.log(getVolwels("salom")); // stringni ichida nechta unli harif bolsa shuni nomerlab terminalga chiqarib beradi.
 //-------------------------J--------------------------------------
 
 // function findLongestWord(inputString: string) {
@@ -101,6 +144,7 @@ MASALAN: gerReverse("hello") return qiladi "olleh"
   - Error handling
 
 
+  Request
 Traditional Api
 Rest Api
 GraphQl Api
@@ -109,14 +153,21 @@ GraphQl Api
   
  */
 
-/*
-cookies
+/*  Frontend development
+Traditional FD    => SSR  => EJS
+Modern FD         => SPA  => REACT
+*/
 
-
-
-
-
+/* cookies
+request joim 
+self destroy
 
 */
 
+/*
+validation: 
+Frontend va validation
+Backend validation
+Database validation 
+*/
 //-----------------------------------------------------------
