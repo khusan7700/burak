@@ -7,41 +7,19 @@ console.log("Train.ts ishga tushdi!");
  MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
 */
 
-function reverseSentence(str: string): string {
-  str = str.trim();
+function check(harf: string): string {
+  const words: string[] = harf.split(" ");
+  const harflar: string[] = [];
 
-  let words: string[] = [];
-  let currentWord: string = "";
-
-  for (let i: number = 0; i < str.length; i++) {
-    if (str[i] !== " ") {
-      currentWord += str[i];
-    } else {
-      words.push(currentWord);
-      currentWord = "";
-    }
+  for (const word of words) {
+    const reversedWord = word.split("").reverse().join("");
+    harflar.push(reversedWord);
   }
 
-  if (currentWord !== "") {
-    words.push(currentWord);
-  }
-
-  let reversed: string = "";
-
-  for (let i: number = words.length - 1; i >= 0; i--) {
-    reversed += words[i];
-
-    if (i !== 0) {
-      reversed += " ";
-    }
-  }
-
-  return reversed;
+  return harflar.join(" ");
 }
 
-// Test qilish
-console.log(reverseSentence(" coding! like we"));
-
+console.log(check("we like coding"));
 //-------------------------K--------------------------------------
 
 /*Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.
