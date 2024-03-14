@@ -1,4 +1,35 @@
 console.log("Train.ts ishga tushdi!");
+//-------------------------M--------------------------------------
+
+/* 
+
+Shunday function yozing, u raqamlardan tashkil topgan array qabul qilsin va
+ array ichidagi har bir raqam uchun raqamni ozi va 
+hamda osha raqamni kvadratidan tashkil topgan object hosil qilib, 
+hosil bolgan objectlarni array ichida qaytarsin.
+MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
+*/
+interface SquareObject {
+  number: number;
+  square: number;
+}
+
+function raqamTopish(numbers: number[]): SquareObject[] {
+  const natija: SquareObject[] = [];
+
+  for (let i = 0; i < numbers.length; i++) {
+    const num = numbers[i];
+    const squareObj: SquareObject = {
+      number: num,
+      square: num * num,
+    };
+    natija.push(squareObj);
+  }
+
+  return natija;
+}
+
+console.log(raqamTopish([1, 2, 3]));
 
 //-------------------------L--------------------------------------
 
