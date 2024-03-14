@@ -1,6 +1,6 @@
-import path from "path";
-import multer from "multer";
-import { v4 } from "uuid";
+import path from "path"; // kore pakej
+import multer from "multer"; //external
+import { v4 } from "uuid"; //external
 
 // MULTER IMAGE UPLOADER
 function getTargetImageStrorage(address: any) {
