@@ -1,6 +1,16 @@
 console.log("Train.ts ishga tushdi!");
 //-------------------------M--------------------------------------
 
+/*
+
+Shunday function yozing, u string qabul qilsin va string palindrom yani togri oqilganda ham, 
+orqasidan oqilganda ham bir hil oqiladigan soz ekanligini aniqlab boolean qiymat qaytarsin.
+MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
+
+ */
+
+//-------------------------M--------------------------------------
+
 /* 
 
 Shunday function yozing, u raqamlardan tashkil topgan array qabul qilsin va
@@ -9,27 +19,27 @@ hamda osha raqamni kvadratidan tashkil topgan object hosil qilib,
 hosil bolgan objectlarni array ichida qaytarsin.
 MASALAN: getSquareNumbers([1, 2, 3]) return [{number: 1, square: 1}, {number: 2, square: 4}, {number: 3, square: 9}];
 */
-interface SquareObject {
-  number: number;
-  square: number;
-}
+// interface SquareObject {
+//   number: number;
+//   square: number;
+// }
 
-function raqamTopish(numbers: number[]): SquareObject[] {
-  const natija: SquareObject[] = [];
+// function raqamTopish(numbers: number[]): SquareObject[] {
+//   const natija: SquareObject[] = [];
 
-  for (let i = 0; i < numbers.length; i++) {
-    const num = numbers[i];
-    const squareObj: SquareObject = {
-      number: num,
-      square: num * num,
-    };
-    natija.push(squareObj);
-  }
+//   for (let i = 0; i < numbers.length; i++) {
+//     const num = numbers[i];
+//     const squareObj: SquareObject = {
+//       number: num,
+//       square: num * num,
+//     };
+//     natija.push(squareObj);
+//   }
 
-  return natija;
-}
+//   return natija;
+// }
 
-console.log(raqamTopish([1, 2, 3]));
+// console.log(raqamTopish([1, 2, 3]));
 
 //-------------------------L--------------------------------------
 
@@ -38,19 +48,19 @@ console.log(raqamTopish([1, 2, 3]));
  MASALAN: reverseSentence("we like coding!") return "ew ekil gnidoc";
 */
 
-function check(harf: string): string {
-  const words: string[] = harf.split(" ");
-  const harflar: string[] = [];
+// function check(harf: string): string {
+//   const words: string[] = harf.split(" ");
+//   const harflar: string[] = [];
 
-  for (const word of words) {
-    const reversedWord = word.split("").reverse().join("");
-    harflar.push(reversedWord);
-  }
+//   for (const word of words) {
+//     const reversedWord = word.split("").reverse().join("");
+//     harflar.push(reversedWord);
+//   }
 
-  return harflar.join(" ");
-}
+//   return harflar.join(" ");
+// }
 
-console.log(check("we like coding"));
+// console.log(check("we like coding"));
 //-------------------------K--------------------------------------
 
 /*Shunday function yozing, u string qabul qilsin va string ichidagi unli harflar sonini qaytarsin.

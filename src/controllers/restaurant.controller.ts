@@ -112,6 +112,32 @@ restaurantController.logout = async (req: AdminRequest, res: Response) => {
   }
 };
 
+//-------------------------------GET.USER--------------------------------------------
+
+restaurantController.getUsers = async (req: Request, res: Response) => {
+  try {
+    console.log("getUser");
+    const result = await memberService.getUsers();
+    console.log("result:", result);
+
+    res.render("user", { users: result });
+  } catch (err) {
+    console.log("Error, getUser:", err);
+    res.redirect("/admin/login");
+  }
+};
+
+//-------------------------------GET.USER--------------------------------------------
+
+restaurantController.updateChosenUsers = (req: Request, res: Response) => {
+  try {
+    console.log("updateChosenUsers");
+    res.render("updateChosenUsers");
+  } catch (err) {
+    console.log("Error, updateChosenUsers:", err);
+  }
+};
+
 //-------------------------------GET.CHECK AUTH SESSION--------------------------------------------
 
 restaurantController.checkAuthSession = async (
