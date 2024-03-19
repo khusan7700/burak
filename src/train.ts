@@ -1,4 +1,6 @@
 console.log("Train.ts ishga tushdi!");
+//-------------------------O--------------------------------------
+
 //-------------------------N--------------------------------------
 
 /*
@@ -9,14 +11,14 @@ MASALAN: palindromCheck("dad") return true;  palindromCheck("son") return false;
 
  */
 
-function palindromCheck(string: string) {
-  const result = string.split("").reverse().join(""); // split (string ga aylantiradi), reverse (), join("" bo'sh qo'ysa har birini orasini ochib beradi)
-  return string === result;
-}
+// function palindromCheck(string: string) {
+//   const result = string.split("").reverse().join(""); // split (string ga aylantiradi), reverse (), join("" bo'sh qo'ysa har birini orasini ochib beradi)
+//   return string === result;
+// }
 
-console.log(palindromCheck("mom")); // m-->0-->m m<--o<--m                       true
-console.log(palindromCheck("abs")); // chapdan o'ngga abs, o'ngdan chapga sba    false
-console.log(palindromCheck("dad")); // d-->a-->d d<--a<--d                       true
+// console.log(palindromCheck("mom")); // m-->0-->m m<--o<--m                       true
+// console.log(palindromCheck("abs")); // chapdan o'ngga abs, o'ngdan chapga sba    false
+// console.log(palindromCheck("dad")); // d-->a-->d d<--a<--d                       true
 
 //-------------------------M--------------------------------------
 
@@ -160,6 +162,16 @@ MASALAN: gerReverse("hello") return qiladi "olleh"
 // console.log(gerReverse("hello"));
 
 //-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
+//-----------------------------------------------------------
 
 /** 
  Project Standards:
@@ -173,7 +185,7 @@ MASALAN: gerReverse("hello") return qiladi "olleh"
 
 
   Request
-Traditional Api
+Traditional Api (form POST)
 Rest Api
 GraphQl Api
 
