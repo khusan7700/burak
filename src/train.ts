@@ -1,7 +1,31 @@
 console.log("Train.ts ishga tushdi!");
 //-------------------------O--------------------------------------
 
-//-------------------------N--------------------------------------
+/* 
+Shunday function yozing, u har xil valuelardan iborat array qabul
+ qilsin va array ichidagi sonlar yigindisini hisoblab chiqqan javobni qaytarsin.
+MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
+
+*/
+const hisoblash: [number, string, boolean, number] = [10, "1O", true, 35];
+
+function numberPlus(arr: [number, string, boolean, number]): number {
+  let qoshishAmali: number = 0;
+  for (let item of arr) {
+    if (
+      typeof item === "number" ||
+      (typeof item === "string" && !isNaN(Number(item)))
+    ) {
+      qoshishAmali += Number(item);
+    }
+  }
+  return qoshishAmali;
+}
+
+let result5 = numberPlus(hisoblash);
+console.log(result5);
+
+// 45//-------------------------N--------------------------------------
 
 /*
 
