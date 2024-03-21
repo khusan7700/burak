@@ -1,4 +1,9 @@
 console.log("Train.ts ishga tushdi!");
+//-------------------------P--------------------------------------
+/* Shunday function yozing, u object qabul qilsin va arrayni object arrayga 
+otkazib arrayni qaytarsin qaytarsin.
+MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]*/
+
 //-------------------------O--------------------------------------
 
 /* 
@@ -7,23 +12,23 @@ Shunday function yozing, u har xil valuelardan iborat array qabul
 MASALAN: calculateSumOfNumbers([10, "10", {son: 10}, true, 35]) return 45
 
 */
-const hisoblash: [number, string, boolean, number] = [10, "1O", true, 35];
+// const hisoblash: [number, string, boolean, number] = [10, "1O", true, 35];
 
-function numberPlus(arr: [number, string, boolean, number]): number {
-  let qoshishAmali: number = 0;
-  for (let item of arr) {
-    if (
-      typeof item === "number" ||
-      (typeof item === "string" && !isNaN(Number(item)))
-    ) {
-      qoshishAmali += Number(item);
-    }
-  }
-  return qoshishAmali;
-}
+// function numberPlus(arr: [number, string, boolean, number]): number {
+//   let qoshishAmali: number = 0;
+//   for (let item of arr) {
+//     if (
+//       typeof item === "number" ||
+//       (typeof item === "string" && !isNaN(Number(item)))
+//     ) {
+//       qoshishAmali += Number(item);
+//     }
+//   }
+//   return qoshishAmali;
+// }
 
-let result5 = numberPlus(hisoblash);
-console.log(result5);
+// let result5 = numberPlus(hisoblash);
+// console.log(result5);
 
 // 45//-------------------------N--------------------------------------
 
