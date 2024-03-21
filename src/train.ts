@@ -4,6 +4,21 @@ console.log("Train.ts ishga tushdi!");
 otkazib arrayni qaytarsin qaytarsin.
 MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]*/
 
+function objectToArray(obj: Record<string, number>): [string, number][] {
+  let resultArray: [string, number][] = [];
+
+  for (let key in obj) {
+    if (obj.hasOwnProperty(key)) {
+      resultArray.push([key, obj[key]]);
+    }
+  }
+
+  return resultArray;
+}
+
+const result = objectToArray({ a: 10, b: 20 });
+console.log(result);
+
 //-------------------------O--------------------------------------
 
 /* 
