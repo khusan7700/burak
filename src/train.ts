@@ -1,23 +1,36 @@
 console.log("Train.ts ishga tushdi!");
+//-------------------------Q--------------------------------------
+/*
+Shunday function yozing, u 2 ta parametrgga ega bolib birinchisi object,
+ ikkinchisi string. Agar string parametr objectni propertysi bolsa true bolmasa false qaytarsin.
+MASALAN: hasProperty({name: "BMW", model: "M3"}, "model") return true; hasProperty({name: "BMW", model: "M3"}, "year") return false
+*/
+function findWord(obj: object, prop: string): boolean {
+  return obj.hasOwnProperty(prop);
+}
+
+console.log(findWord({ name: "BMW", model: "M3" }, "model"));
+console.log(findWord({ name: "BMW", model: "M3" }, "year"));
+
 //-------------------------P--------------------------------------
 /* Shunday function yozing, u object qabul qilsin va arrayni object arrayga 
 otkazib arrayni qaytarsin qaytarsin.
 MASALAN: objectToArray( {a: 10, b: 20}) return [['a', 10], ['b', 20]]*/
 
-function objectToArray(obj: Record<string, number>): [string, number][] {
-  let resultArray: [string, number][] = [];
+// function objectToArray(obj: Record<string, number>): [string, number][] {
+//   let resultArray: [string, number][] = [];
 
-  for (let key in obj) {
-    if (obj.hasOwnProperty(key)) {
-      resultArray.push([key, obj[key]]);
-    }
-  }
+//   for (let key in obj) {
+//     if (obj.hasOwnProperty(key)) {
+//       resultArray.push([key, obj[key]]);
+//     }
+//   }
 
-  return resultArray;
-}
+//   return resultArray;
+// }
 
-const result = objectToArray({ a: 10, b: 20 });
-console.log(result);
+// const result = objectToArray({ a: 10, b: 20 });
+// console.log(result);
 
 //-------------------------O--------------------------------------
 
