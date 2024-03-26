@@ -1,16 +1,32 @@
 console.log("Train.ts ishga tushdi!");
 //-------------------------Q--------------------------------------
 /*
+Shunday function yozing, u string parametrga ega bolsin.
+ String "1+2" holatda pass qilinganda string ichidagi sonlar yigindisini number holatda qaytarsin.
+MASALAN: calculate("1+3") return 4;
+*/
+
+function qoshishAmali(qoshish: string): number {
+  // string degandan so'ng number berish shart shunki stringni ichidagi nomer haqia gap ketyatgan boladi.
+  return eval(qoshish);
+}
+
+console.log(qoshishAmali("1 + 3")); // functionni nomini chaqiradi va argumentga ko'zlangan sonlarni matematik amallarni bajarish mumkin boladi.
+console.log(qoshishAmali("1 * 3"));
+console.log(qoshishAmali("6 / 3"));
+console.log(qoshishAmali("12345 % 123"));
+//-------------------------Q--------------------------------------
+/*
 Shunday function yozing, u 2 ta parametrgga ega bolib birinchisi object,
  ikkinchisi string. Agar string parametr objectni propertysi bolsa true bolmasa false qaytarsin.
 MASALAN: hasProperty({name: "BMW", model: "M3"}, "model") return true; hasProperty({name: "BMW", model: "M3"}, "year") return false
 */
-function findWord(obj: object, prop: string): boolean {
-  return obj.hasOwnProperty(prop);
-}
+// function findWord(obj: object, prop: string): boolean {
+//   return obj.hasOwnProperty(prop);
+// }
 
-console.log(findWord({ name: "BMW", model: "M3" }, "model"));
-console.log(findWord({ name: "BMW", model: "M3" }, "year"));
+// console.log(findWord({ name: "BMW", model: "M3" }, "model"));
+// console.log(findWord({ name: "BMW", model: "M3" }, "year"));
 
 //-------------------------P--------------------------------------
 /* Shunday function yozing, u object qabul qilsin va arrayni object arrayga 
