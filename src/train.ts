@@ -1,20 +1,37 @@
 console.log("Train.ts ishga tushdi!");
+//-------------------------S--------------------------------------
+/*Shunday function yozing, u numberlardan tashkil topgan array qabul
+ qilsin va osha numberlar orasidagi tushib qolgan sonni topib uni return qilsin
+MASALAN: missingNumber([3, 0, 1]) return 2
+*/
+function findNumber(arr: number[]): number {
+  for (let i = 1; i <= arr.length + 1; i++) {
+    if (!arr.includes(i)) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+console.log(findNumber([1, 3, 4, 5, 6, 7, 8, 9]));
+
 //-------------------------Q--------------------------------------
+
 /*
 Shunday function yozing, u string parametrga ega bolsin.
  String "1+2" holatda pass qilinganda string ichidagi sonlar yigindisini number holatda qaytarsin.
 MASALAN: calculate("1+3") return 4;
 */
 
-function qoshishAmali(qoshish: string): number {
-  // string degandan so'ng number berish shart shunki stringni ichidagi nomer haqia gap ketyatgan boladi.
-  return eval(qoshish);
-}
+// function qoshishAmali(qoshish: string): number {
+//   // string degandan so'ng number berish shart shunki stringni ichidagi nomer haqia gap ketyatgan boladi.
+//   return eval(qoshish);
+// }
 
-console.log(qoshishAmali("1 + 3")); // functionni nomini chaqiradi va argumentga ko'zlangan sonlarni matematik amallarni bajarish mumkin boladi.
-console.log(qoshishAmali("1 * 3"));
-console.log(qoshishAmali("6 / 3"));
-console.log(qoshishAmali("12345 % 123"));
+// console.log(qoshishAmali("1 + 3")); // functionni nomini chaqiradi va argumentga ko'zlangan sonlarni matematik amallarni bajarish mumkin boladi.
+// console.log(qoshishAmali("1 * 3"));
+// console.log(qoshishAmali("6 / 3"));
+// console.log(qoshishAmali("12345 % 123"));
 //-------------------------Q--------------------------------------
 /*
 Shunday function yozing, u 2 ta parametrgga ega bolib birinchisi object,
